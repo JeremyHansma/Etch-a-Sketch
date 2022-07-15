@@ -1,0 +1,39 @@
+html, body {
+    background-color: #232c33;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+
+#grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 272px;
+    height:auto;
+    flex-wrap: wrap;
+}
+
+
+.grid-box {
+    width: 15px;
+    height: 15px;
+    border: solid 1px #449dd1
+}
+
+.grid-box:hover {
+    background-color: #449dd1;
+}
+
+.color {
+    background-color: white;
+}
