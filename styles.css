@@ -4,10 +4,14 @@ html, body {
     height: 100%;
     width: 100%;
     justify-content: center;
+    flex-direction: row;
 }
 
+.title {
+    float:inline-start;
+}
 
-#grid-container {
+.grid-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,12 +19,13 @@ html, body {
 
 
 #grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 272px;
-    height:auto;
-    flex-wrap: wrap;
+    display: inline-grid;
+    grid-template-columns: repeat(16, 2fr);
+    grid-template-rows: repeat(16, 2fr);
+    /*border: 5px solid black;*/
+    border-radius: 5px;
+    height: auto;
+    width: auto;
 }
 
 
@@ -30,10 +35,9 @@ html, body {
     border: solid 1px #449dd1
 }
 
-.grid-box:hover {
-    background-color: #449dd1;
-}
-
-.color {
+.color {                    /*This is the color change for .grid-box*/
     background-color: white;
+    width: 15px;
+    height: 15px;
+    border: solid 1px #449dd1
 }
