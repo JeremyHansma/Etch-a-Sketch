@@ -4,17 +4,26 @@ html, body {
     height: 100%;
     width: 100%;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .title {
-    float:inline-start;
+    display: flex;
+    margin-bottom: 100px;
+    justify-content: center;
+}
+
+.color-selections {
+    justify-content: center;
+    display: flex;
+    margin: 0;
 }
 
 .grid-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1px;
 }
 
 
@@ -24,15 +33,19 @@ html, body {
     grid-template-rows: repeat(16, 2fr);
     /*border: 5px solid black;*/
     border-radius: 5px;
-    height: auto;
-    width: auto;
+    height: 256px;
+    width: 256px;
 }
 
 
 .grid-box {
-    width: 15px;
-    height: 15px;
+    width: 16px;    
+    height: 16px;
     border: solid 1px #449dd1
+}
+
+.grid-box:hover {
+    background-color: #449dd1;
 }
 
 .color {                    /*This is the color change for .grid-box*/
