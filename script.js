@@ -1,15 +1,3 @@
-const COLORS = [ 
-    {
-        color: "red",
-    },{
-        color: "blue",
-    },{
-        color: "green",
-    }
-]
-
-
-
 function addGrid () {
     document.querySelectorAll('.grid-box').forEach(function (elem){
         elem.remove();
@@ -21,19 +9,19 @@ function addGrid () {
         grid.classList.add('grid-box');
         div.append(grid)
     }
-    document.getElementById('grid').style.width = `288px`
-    document.getElementById('grid').style.height = `288px`
-    document.getElementById('grid').style.gridTemplateColumns = `repeat(16, 2fr)`;
-    document.getElementById('grid').style.gridTemplateRows = `repeat(16, 2fr)`;
+    document.getElementById('grid').style.width = `500px`
+    document.getElementById('grid').style.height = `500px`
+    document.getElementById('grid').style.gridTemplateColumns = `repeat(16, 1fr)`;
+    document.getElementById('grid').style.gridTemplateRows = `repeat(16, 1fr)`;
 }
-
+//INITIAL CREATION OF GRID
 addGrid();
 
 userInput = () => {
     const input = document.getElementById('quantity').value
     return input;
 }
-
+//RESIZING OF THE GRID ON USER INPUT
 resizeGrid = () => {
     const genNum = userInput();
     const numSqrd = genNum ** 2;
@@ -41,7 +29,7 @@ resizeGrid = () => {
     document.querySelectorAll('.grid-box').forEach(function (elem){
         elem.remove();
     })
-    const widthHeight = (16/genNum) *16;
+    const widthHeight = (500 / genNum);
     console.log(widthHeight);
     
 
@@ -52,10 +40,10 @@ resizeGrid = () => {
         newDiv.append(newGrid);
         
     }
-    document.getElementById('grid').style.width = `${(256 + (genNum*2))}px`
-    document.getElementById('grid').style.height = `${(256 + (genNum*2))}px`
-    document.getElementById('grid').style.gridTemplateColumns = `repeat(${genNum}, 2fr)`;
-    document.getElementById('grid').style.gridTemplateRows = `repeat( ${genNum}, 2fr)`;
+    //document.getElementById('grid').style.width = `${(256 + (genNum*2))}px`
+    //document.getElementById('grid').style.height = `${(256 + (genNum*2))}px`
+    document.getElementById('grid').style.gridTemplateColumns = `repeat(${genNum}, 1fr)`;
+    document.getElementById('grid').style.gridTemplateRows = `repeat( ${genNum}, 1fr)`;
     changeSize = () => {
         const nodeList = document.querySelectorAll('div.grid-box');
         for(let i = 0; i < nodeList.length; i++){
@@ -65,7 +53,5 @@ resizeGrid = () => {
         }
     }
     changeSize();
-    
 }
-
 

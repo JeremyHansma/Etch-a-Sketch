@@ -1,5 +1,5 @@
 html, body {
-    background-color: #232c33;
+    background-color: #5d7587;
     display: flex;
     height: 100%;
     width: 100%;
@@ -7,9 +7,18 @@ html, body {
     flex-direction: column;
 }
 
+.header {
+    display: flex;
+    font-size: 75px;
+    color:aliceblue;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .title {
     display: flex;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     justify-content: center;
 }
 
@@ -29,28 +38,29 @@ html, body {
 
 #grid {
     display: inline-grid;
-    grid-template-columns: repeat(16, 2fr);
-    grid-template-rows: repeat(16, 2fr);
-    /*border: 5px solid black;*/
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: repeat(4, 2fr);
+    background-color: aliceblue;
+    box-shadow:  #09141a 0px 2px 10px;
     border-radius: 5px;
-    height: 256px;
-    width: 256px;
+    height: 500px;
+    width: 500px;
 }
 
 
 .grid-box {
-    width: 16px;    
-    height: 16px;
-    border: solid 1px #449dd1
+    width: 31.25px;    
+    height: 31.25px;
+    /*border: solid 0.1px #5d7587;*/
 }
 
 .grid-box:hover {
-    background-color: #449dd1;
+    background-color: #09141a;
 }
 
 .color {                    /*This is the color change for .grid-box*/
     background-color: white;
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     border: solid 1px #449dd1
 }
